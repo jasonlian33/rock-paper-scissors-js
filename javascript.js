@@ -2,7 +2,6 @@ console.log("hello!")
 
 function getComputerChoice(){
     let randomNum = Math.floor(Math.random() * 3); // randomly chooses a number 0,1,2
-    console.log(randomNum);
 
     if (randomNum === 0){
         return "Rock";
@@ -32,6 +31,7 @@ var humanScore = 0;
 var computerScore = 0;
 
 function playRound(humanChoice, computerChoice){
+    console.log(humanChoice, computerChoice);
     if (humanChoice === "Rock" && computerChoice === "Scissors"){
         humanScore ++; 
         return "You Win! Rock beats Scissors";
@@ -49,8 +49,29 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+//const humanSelection = getHumanChoice();
+//const computerSelection = getComputerChoice();
 
 
-console.log(playRound(humanSelection, computerSelection));
+//console.log(playRound(humanSelection, computerSelection));
+
+function playGame(){
+    let rounds = 0;
+
+    while (rounds < 5){
+        var newHumanChoice = getHumanChoice();
+        var newComputerChoice = getComputerChoice();
+        playRound(newHumanChoice, newComputerChoice);
+        rounds ++;
+    }
+
+    if (humanScore > computerScore){
+        return "You Win!"
+    } else if (humanScore < computerScore){
+        return "You Lose!"
+    } else{
+        return "You Draw!"
+    }
+}
+
+console.log(playGame());
