@@ -13,3 +13,18 @@ function getComputerChoice(){
     }
 }
 
+function getHumanChoice(){
+    let choice = prompt("What do you choose?");
+
+    if (choice.toLowerCase() === "rock"){
+        return "Rock";
+    } else if (choice.toLowerCase() === "paper"){
+        return "Paper";
+    } else if (choice.toLowerCase() === "scissors"){
+        return "Scissors";
+    } else{
+        return "Invalid Choice"
+    }
+}
+
+console.log(getHumanChoice());
