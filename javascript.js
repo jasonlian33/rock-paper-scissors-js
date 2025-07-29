@@ -56,9 +56,15 @@ selection.forEach(button => {
         const playerChoice = event.target.textContent;  
         const computerChoice = getComputerChoice();
         //console.log(event.target.textContent);
-        console.log(playRound(playerChoice, computerChoice));
+        const container = document.querySelector("#container");
+        const div = document.createElement("div");
+        const result = playRound(playerChoice, computerChoice);
+        div.textContent = `${result}`;
+        container.append(div);
     });
 });
+
+
 
 
 
