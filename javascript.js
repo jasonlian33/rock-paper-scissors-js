@@ -49,6 +49,17 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
+const selection = document.querySelectorAll(".button");
+
+selection.forEach(button => {
+    button.addEventListener('click', function(event){
+        const playerChoice = event.target.textContent;  
+        const computerChoice = getComputerChoice();
+        //console.log(event.target.textContent);
+        console.log(playRound(playerChoice, computerChoice));
+    });
+});
+
 
 
 /*
@@ -72,4 +83,4 @@ function playGame(){
 }
 */
 
-console.log(playGame());
+//console.log(playGame());
