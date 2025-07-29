@@ -49,12 +49,9 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
-//const humanSelection = getHumanChoice();
-//const computerSelection = getComputerChoice();
 
 
-//console.log(playRound(humanSelection, computerSelection));
-
+/*
 function playGame(){
     let rounds = 0;
 
@@ -73,5 +70,6 @@ function playGame(){
         return "You Draw!"
     }
 }
+*/
 
 console.log(playGame());
