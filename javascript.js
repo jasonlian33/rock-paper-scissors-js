@@ -56,11 +56,19 @@ selection.forEach(button => {
         const playerChoice = event.target.textContent;  
         const computerChoice = getComputerChoice();
         //console.log(event.target.textContent);
+        
         const container = document.querySelector("#container");
+
         const div = document.createElement("div");
         const result = playRound(playerChoice, computerChoice);
         div.textContent = `${result}`;
+
+        const score = document.createElement("div");
+        score.textContent = `Player: ${humanScore} - Computer: ${computerScore}`;
+
+        
         container.append(div);
+        container.append(score);
     });
 });
 
